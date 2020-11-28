@@ -1,6 +1,6 @@
 # SpringbootProject
-SSM框架，VUE，前后端分离实践
-***Reproduced from: https://www.bilibili.com/video/BV1y7411y7am?from=search&seid=12705559201586858813***
+SSM框架，VUE，前后端分离实践  
+***Reproduced from: [bilibili](https://www.bilibili.com/video/BV1y7411y7am?from=search&seid=12705559201586858813)***
 ## 依赖
 1. JDK: 1.8
 2. maven: 3.6.3
