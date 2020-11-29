@@ -1,6 +1,7 @@
 # SpringbootProject
 SSM框架，VUE，前后端分离实践  
 ***Reproduced from: [bilibili](https://www.bilibili.com/video/BV1y7411y7am?from=search&seid=12705559201586858813)***
+***VUE: [VUE](https://www.bilibili.com/video/BV12J411m7MG?from=search&seid=10768844227077221349)***
 
 ## 依赖
 1. JDK: 1.8
@@ -46,6 +47,7 @@ SSM框架，VUE，前后端分离实践
 ## 自动装配
 MyBatis Plus提供了MetaObjectHandler接口实现字段在创建和更新时的自动装配
 
-## 删除
-1. 物理删除：直接在数据库删除
-2. 逻辑删除：在数据库设置标志位，无法查询但并未真正删除
+## 三种环境
+1. dev: 开发环境
+2. test: 测试环境
+3. prod: 生产环境
