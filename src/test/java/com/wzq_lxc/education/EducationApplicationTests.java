@@ -24,4 +24,24 @@ public class EducationApplicationTests {
         System.out.println(users);
     }
 
+    @Test
+    void addUser() {
+        User user = new User();
+        user.setName("alex");
+        user.setAge(20);
+        user.setEmail("alex@qq.com");
+
+        userMapper.insert(user);
+    }
+
+    @Test
+    void UpdateUser() {
+        User user = new User();
+        user.setId(2L);
+        user.setAge(30);
+        user.setName("Jack");
+
+        int row = userMapper.updateById(user);
+        System.out.println(row);
+    }
 }

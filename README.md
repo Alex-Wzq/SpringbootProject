@@ -1,6 +1,7 @@
 # SpringbootProject
 SSM框架，VUE，前后端分离实践  
 ***Reproduced from: [bilibili](https://www.bilibili.com/video/BV1y7411y7am?from=search&seid=12705559201586858813)***
+
 ## 依赖
 1. JDK: 1.8
 2. maven: 3.6.3
@@ -26,3 +27,21 @@ SSM框架，VUE，前后端分离实践
 5. 对JVM原理及调优有一定了解。 
 6. 熟练使用git,maven 等工具。 
 7. 了解分布式应用系统的设计和开发。
+
+## 主键自动生成
+1. [分布式系统唯一ID生成方案汇总](https://www.cnblogs.com/haoxinyue/p/5208136.html)
+2. DB: AUTO INCREMENT
+3. UUID: 每次操作生成一个随机位置值 (id值无法排序)
+4. Redis生成ID
+5. mp自动生成19位 (Twitter的snowflake算法)
+```java
+    // @TableId(type = IdType.INPUT) // 需要自己输入
+    // @TableId(type = IdType.NONE)  // 需要自己输入
+    // @TableId(type = IdType.UUID) 
+    // @TableId(type = IdType.ID_WORKER) // mp自带，生成19位，数字类型使用这种策略
+    // @TableId(type = IdType.ID_WORKER_STR) // mp自带，生成19位，字符串类型使用这种策略
+    // @TableId(type = IdType.AUTO) // 自动增长，默认，雪花算法
+```
+
+## 自动装配
+MyBatis Plus提供了MetaObjectHandler接口实现字段在创建和更新时的自动装配

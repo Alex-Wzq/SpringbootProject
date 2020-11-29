@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 // BaseMapper接口自动实现CRUD
+// mp自动生成主键 19位
 public interface UserMapper extends BaseMapper<User> {
 
 }
